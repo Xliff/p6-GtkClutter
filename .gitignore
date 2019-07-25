@@ -1,3 +1,5 @@
-scripts/
+scripts/*
 .precomp
+c-examples/*
+.touch/
 
