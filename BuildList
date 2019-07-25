@@ -1,0 +1,8 @@
+Clutter::Stage
+GTK::Clutter::Raw::Embed
+GTK::Clutter::Raw::Types
+GTK::Compat::Types
+GTK::Container
+GTK::Raw::Utils
+GTK::Roles::Pointers
+
