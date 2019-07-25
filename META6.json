@@ -1,0 +1,29 @@
+{
+    "depends": [
+	    "p6-GtkPlus",
+      "p6-GtkClutter"
+    ],
+    "description": "Perl6 library bindings for GNOME's GTK-Clutter",
+    "version": "r0.0.1",
+    "meta-version": "0",
+    "source-url": "https://github.com/Xliff/p6-Clutter",
+    "provides": {
+      "GTK::Clutter::Actor"      :  "lib/GTK/Clutter/Actor.pm6"     ,
+      "GTK::Clutter::Embed"      :  "lib/GTK/Clutter/Embed.pm6"     ,
+      "GTK::Clutter::Main"       :  "lib/GTK/Clutter/Main.pm6"      ,
+      "GTK::Clutter::Raw::Actor" :  "lib/GTK/Clutter/Raw/Actor.pm6" ,
+      "GTK::Clutter::Raw::Embed" :  "lib/GTK/Clutter/Raw/Embed.pm6" ,
+      "GTK::Clutter::Raw::Types" :  "lib/GTK/Clutter/Raw/Types.pm6" ,
+      "GTK::Clutter::Window"     :  "lib/GTK/Clutter/Window.pm6"    
+    },
+    "name": "Perl6-GtkClutter",
+    "perl": "6.c",
+    "test-depends": [ "Test::META" ],
+    "build-depends": [
+      "Text::Table::Simple",
+      "Dependency::Sort",
+      "File::Find"
+    ],
+    "support": { "source": null },
+    "authors": [ "clifton.wood@gmail.com" ]
+}

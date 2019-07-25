@@ -1,0 +1,3 @@
+prefix=Gtk
+modules=GTK::Clutter::Raw::Types
+backups=backup,bitbucket

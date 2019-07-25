@@ -2,4 +2,16 @@ scripts/*
 .precomp
 c-examples/*
 .touch/
-
+LastBuildResults
+LastBuildResults.*
+*.bak
+*.iml
+*.bump
+*~
+test-new
+.test/
+.idea/
+.touch/
+.idea/
+.precomp/
+dead/
