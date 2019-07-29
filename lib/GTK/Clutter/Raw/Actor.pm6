@@ -20,7 +20,7 @@ sub gtk_clutter_actor_get_type ()
 { * }
 
 sub gtk_clutter_actor_get_widget (GtkClutterActor $actor)
-  returns GtkWidget
+  returns GtkContainer
   is native(gtk-clutter)
   is export
 { * }

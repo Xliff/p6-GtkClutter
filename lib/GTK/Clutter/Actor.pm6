@@ -11,6 +11,7 @@ use GTK::Clutter::Raw::Actor;
 
 use GTK::Roles::Data;
 
+use GTK::Bin;
 use GTK::Widget;
 
 use Clutter::Actor;
@@ -63,7 +64,11 @@ class GTK::Clutter::Actor is Clutter::Actor {
 
   method get_widget(:$raw) is also<get-widget> {
     my $w = gtk_clutter_actor_get_widget($!ca);
-    $raw ?? $w !! GTK::Widget.CreateObject($w);
+    # Lowest we can drop down to is GTK::Bin.
+    my $t = GTK::Widget.getType($w);
+    $raw ?? $w !!
+            $t.defined && $t.trim.chars ??
+              GTK::Widget.CreateObject($w) !! GTK::Bin.new($w);
   }
 
   # XXX - NOTE: When using GTK::Container methods to handle contents, the
