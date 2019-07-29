@@ -1,5 +1,7 @@
 use v6.c;
 
+use Method::Also;
+
 use GTK::Compat::Types;
 use GTK::Raw::Types;
 use GTK::Clutter::Raw::Types;
@@ -45,7 +47,7 @@ class GTK::Clutter::Embed is GTK::Container {
     self.bless( embed => gtk_clutter_embed_new() );
   }
 
-  method use_layout_size is rw {
+  method use_layout_size is rw is also<use-layout-size> {
     Proxy.new(
       FETCH => sub ($) {
         so gtk_clutter_embed_get_use_layout_size($!gc);
@@ -57,11 +59,11 @@ class GTK::Clutter::Embed is GTK::Container {
     );
   }
 
-  method get_stage {
+  method get_stage is also<get-stage> {
     Clutter::Stage.new( gtk_clutter_embed_get_stage($!gc) )
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
     unstable_get_type( self.^name, &gtk_clutter_embed_get_type, $n, $t );
   }

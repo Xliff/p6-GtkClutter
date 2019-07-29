@@ -26,14 +26,13 @@ sub gtk_clutter_actor_get_widget (GtkClutterActor $actor)
 { * }
 
 sub gtk_clutter_actor_new ()
-  returns ClutterActor
+  returns GtkClutterActor
   is native(gtk-clutter)
   is export
 { * }
 
 sub gtk_clutter_actor_new_with_contents (GtkWidget $contents)
-  returns ClutterActor
+  returns GtkClutterActor
   is native(gtk-clutter)
   is export
 { * }
-

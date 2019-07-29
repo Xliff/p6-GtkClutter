@@ -1,5 +1,7 @@
 use v6.c;
 
+use Method::Also;
+
 use NativeCall;
 
 use GTK::Compat::Types;
@@ -25,12 +27,12 @@ class GTK::Clutter::Window is GTK::Window {
     self.bless( clutter-window => gtk_clutter_window_new() );
   }
 
-  method get_stage (:$raw) {
+  method get_stage (:$raw) is also<get-stage> {
     my $s = gtk_clutter_window_get_stage($!gcw);
     $raw ?? $s !! Clutter::Stage.new($s);
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
     unstable_get_type( self.^name, &gtk_clutter_window_get_type, $n, $t );
   }

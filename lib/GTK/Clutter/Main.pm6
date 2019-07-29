@@ -1,5 +1,9 @@
 use v6.c;
 
+use Method::Also;
+
+use NativeCall;
+
 use GTK::Compat::Types;
 use GTK::Clutter::Raw::Types;
 
@@ -7,7 +11,7 @@ use GTK::Raw::Utils;
 
 class GTK::Clutter::Main {
 
-  method get_option_group {
+  method get_option_group is also<get-option-group> {
     gtk_clutter_get_option_group();
   }
 
@@ -26,9 +30,11 @@ class GTK::Clutter::Main {
     GOptionEntry $entries,
     Str $translation_domain,
     CArray[Pointer[GError]] $error = gerror
-  ) {
+  )
+    is also<init-with-args>
+  {
     my $c = resolve-int($argc);
-    clear-error;
+    clear_error;
     my $rc = gtk_clutter_init_with_args(
       $c,
       $argv,
@@ -37,7 +43,7 @@ class GTK::Clutter::Main {
       $translation_domain,
       $error
     );
-    set-error($error);
+    set_error($error);
     $rc;
   }
 
