@@ -1,5 +1,6 @@
 use v6.c;
 
+use Method::Also;
 use NativeCall;
 
 use GTK::Compat::Types;
@@ -34,6 +35,10 @@ class GTK::Clutter::Texture is Clutter::Actor {
     }
   }
 
+  method GTK::Clutter::Raw::Types::GtkClutterTexture
+    is also<ClutterTexture>
+  { * }
+
   multi method new (GtkClutterTexture $texture) {
     self.bless(:$texture);
   }
@@ -41,11 +46,11 @@ class GTK::Clutter::Texture is Clutter::Actor {
     self.bless( texture => gtk_clutter_texture_new() );
   }
 
-  method error_quark {
+  method error_quark is also<error-quark> {
     gtk_clutter_texture_error_quark();
   }
 
-  method get_type {
+  method get_type is also<get-type> {
     state ($n, $t);
     unstable_get_type( self.^name, &gtk_clutter_texture_get_type, $n, $t );
   }
@@ -54,8 +59,10 @@ class GTK::Clutter::Texture is Clutter::Actor {
     GtkWidget() $widget,
     Str() $icon_name,
     Int() $icon_size,
-    CArray[Pointer[GError]] $error
-  ) {
+    CArray[Pointer[GError]] $error = gerror
+  )
+    is also<set-from-icon-name>
+  {
     my $is = resolve-int($icon_size);
     clear_error;
     my $rc = gtk_clutter_texture_set_from_icon_name(
@@ -68,7 +75,9 @@ class GTK::Clutter::Texture is Clutter::Actor {
   method set_from_pixbuf (
     GdkPixbuf() $pixbuf,
     CArray[Pointer[GError]] $error = gerror
-  ) {
+  )
+    is also<set-from-pixbuf>
+  {
     clear_error;
     my $rc = gtk_clutter_texture_set_from_pixbuf($!gct, $pixbuf, $error);
     set_error($error);
@@ -80,7 +89,9 @@ class GTK::Clutter::Texture is Clutter::Actor {
     Str $stock_id,
     Int() $icon_size,
     CArray[Pointer[GError]] $error = gerror
-  ) {
+  )
+    is also<set-from-stock>
+  {
     my $is = resolve-int($icon_size);
     clear_error;
     my $rc = gtk_clutter_texture_set_from_stock(

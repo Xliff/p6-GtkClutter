@@ -8,58 +8,43 @@ use GTK::Clutter::Raw::Types;
 
 use Clutter::Actor;
 use Clutter::AlignConstraint;
-use Clutter::Image;
 
 use GTK::Application;
 use GTK::Box;
-use GTK::IconTheme;
-use GTK::Image;
 use GTK::Notebook;
 use GTK::Window;
 
 use GTK::Clutter::Embed;
 use GTK::Clutter::Main;
+use GTK::Clutter::Texture;
 
-my %globals;
+my (%globals, @clutter);
 
 sub create-tex($stage, $icon) {
-  my $theme = GTK::IconTheme.get-default;
+  my $tex = GTK::Clutter::Texture.new;
   my $is-info = $icon.ends-with('information');
-  my $pixbuf = $theme.load-icon(
-    $icon,
-    $is-info ?? GTK_ICON_SIZE_DIALOG !! GTK_ICON_SIZE_BUTTON,
-    GTK_ICON_LOOKUP_USE_BUILTIN
-  );
-  my $i = GTK::Image.new-from-pixbuf($pixbuf);
-  %globals<vbox>.add($i);
-  (my $image = Clutter::Image.new).set-data(
-    $pixbuf.pixels,
-    $pixbuf.has_alpha ??
-      COGL_PIXEL_FORMAT_RGBA_8888 !! COGL_PIXEL_FORMAT_RGB_888,
-    $pixbuf.width,
-    $pixbuf.height,
-    $pixbuf.rowstride
-  );
-  my $tex = do {
-    my %data = ( content => $image );
-    if $is-info {
-      %data<position> = [ 160 - $pixbuf.width / 2, 120 - $pixbuf.height / 2 ]
-    } else {
-      %data<constraint> = Clutter::AlignConstraint.new(
-        $stage, CLUTTER_ALIGN_BOTH, 0.5
-      );
-    }
 
-    Clutter::Actor.new.setup(|%data);
-  };
-  $tex.show;
+  $tex.set-from-icon-name(
+    @clutter[1],
+    $icon,
+    $is-info ?? GTK_ICON_SIZE_DIALOG !! GTK_ICON_SIZE_BUTTON
+  );
+  if $is-info {
+    $tex.set-position(160 - $tex.width / 2, 120 - $tex.height / 2);
+  } else {
+    $tex.add-constraint(
+      Clutter::AlignConstraint.new(
+        $stage, CLUTTER_ALIGN_BOTH, 0.5
+      )
+    );
+  }
   $stage.add-child($tex);
+  $tex.show-actor;
 }
 
 sub MAIN {
   exit(1) unless GTK::Clutter::Main.init == CLUTTER_INIT_SUCCESS;
 
-  my @clutter;
   my @col = (
     Clutter::Color.new(0xdd, 0xff, 0xdd, 0xff),
     Clutter::Color.new(0xff, 0xff, 0xff, 0xff),
