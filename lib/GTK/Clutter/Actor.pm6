@@ -20,6 +20,12 @@ class GTK::Clutter::Actor is Clutter::Actor {
   has GtkClutterActor $!ca;
   has $!contents;
 
+  method bless(*%attrinit) {
+    my $o = self.CREATE.BUILDALL(Empty, %attrinit);
+    $o.setType($o.^name);
+    $o;
+  }
+
   submethod BUILD (:$clutter-actor, :$object) {
     # This will NOT accept an Ancestry!
     self.setActor( cast(ClutterActor, $!ca = $clutter-actor) );
