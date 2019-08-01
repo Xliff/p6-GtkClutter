@@ -47,7 +47,7 @@ sub MAIN {
         parent              => %globals<scroll>,
         constraints-by-name => [
           'left', Clutter::BindConstraint.new(CLUTTER_ALIGN_X_AXIS).setup(
-            factor => *.dur / $sum
+            factor => *.dur / $tot
           )
         ]
       )
@@ -87,10 +87,10 @@ sub MAIN {
     user-resizable => True,
   );
 
-  my %globals<scroll> = Clutter::ScrollActor.new.setup(
-    scroll-mode => CLUTTER_SCROLL_BOTH,
+  %globals<scroll> = Clutter::ScrollActor.new.setup(
+    scroll-mode     => CLUTTER_SCROLL_BOTH,
     # Change to a GridLayout
-    layout      => Clutter::BoxLayout.new.setup(
+    layout-manager  => Clutter::BoxLayout.new.setup(
         orientation => CLUTTER_ORIENTATION_VERTICAL
     ),
     constraints => [
@@ -99,7 +99,7 @@ sub MAIN {
     ],
   );
 
-  $stage.add-child(%globlas<scroll>);
+  $stage.add-child(%globals<scroll>);
   $stage.destroy.tap({ Clutter::Main.quit });
   $stage.activate.tap({
     %globals<init>.keep unless %globals<init>.status ~~ Kept
