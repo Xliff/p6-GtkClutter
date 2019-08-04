@@ -47,27 +47,28 @@ sub MAIN {
       expand             => False,
       parent             => %globals<scroll>,
       size               => (PIXEL-SECONDS * $task<dur>, 50),
-      # constraint-with-name => [
-      #   'stage-x', 
-      #   Clutter::AlignConstraint.new(
-      #     $last-a ?? $last-a !! %globals<stage>, 
-      #     CLUTTER_ALIGN_X_AXIS,
-      #     $last-a ?? 1 !! 0
-      #   )
-      # ]
+      reactive           => True,
       effects-with-name  => [
         [ 'bright', Clutter::BrightnessContrastEffect.new ]
       ]
     );  
       
     # Hover
-    $a.enter-event.tap({
-      my $b = Clutter::BrightnessContrastEffect.new( $a.get-effect('bright') );
-      $b.brightness = 15;
+    $a.enter-event.tap(-> *@a {
+      CATCH { default { .message.say } }
+      my $b = Clutter::BrightnessContrastEffect.new( 
+        $a.get-effect('bright', :raw) 
+      );
+      $b.set-brightness(0.25);
+      @a[* - 1].r = 1;
     });
-    $a.leave-event.tap({
-      my $b = Clutter::BrightnessContrastEffect.new( $a.get-effect('bright') );
-      $b.brightness = 0;
+    $a.leave-event.tap(-> *@a {
+      CATCH { default { .message.say } }
+      my $b = Clutter::BrightnessContrastEffect.new( 
+        $a.get-effect('bright', :raw) 
+      );
+      $b.set-brightness(0);
+      @a[* - 1].r = 1;
     });  
   });
 
