@@ -17,94 +17,119 @@ my $Timeline-Data;
 
 my (%tasks, %events, %globals);
 
-constant PIXEL-SECONDS = 100;
+constant ONE-SECOND-WIDTH = 100;
 
 sub MAIN {
   exit(1) unless Clutter::Main.init == CLUTTER_INIT_SUCCESS;
-
+  
   my $S = Supplier.new;
   my $supply = $S.Supply;
   %globals<init> = Promise.new;
-
-  $supply.tap(-> *@a [$i, $t] {
-    CATCH { default { .message.say } }
+  
+  $supply.tap(-> *@a [$i, $t] { 
+    CATCH { default { .message.say } } 
     
     await %globals<init> if %globals<init>.status ~~ Planned;
-
+    
     say "Adding task #{ $i }";
     %tasks{$i} = $t;
-
-    my $tot = %tasks.values.map( *<dur> ).sum;
-
+    
     my $c = Clutter::Color.new_from_hls(360 * rand, 0.5, 0.5);
     $c.alpha = 255;
-
+    
+    my $a;
     %globals<actors>.push: (
-      %tasks{$i}<actor> = Clutter::Actor.new.setup(
-        background-color     => $c,
-        parent               => %globals<scroll>,
-        width                => PIXEL-SECONDS * $t<dur>,
-        constraint-with-name => (
-          'left', Clutter::BindConstraint.new(
-            %globals<scroll>, CLUTTER_ALIGN_X_AXIS, $t<dur> / $tot
-          )
-        )
+      $a = %tasks{$i}<actor> = Clutter::Actor.new.setup(
+        background-color    => $c,
+        expand              => False,
+        parent              => %globals<scroll>,
+        size                => (%tasks{$i}<dur> * ONE-SECOND-WIDTH, 50),  
+        # constraint-by-name  => [
+          # stage-x = X position relative to the stage.
+          # For the first actor, this will always be the left axis, but 
+          # for all subsequent actors, this will be to the right of its
+          # predecessor.
+        #   'stage-x', 
+        #   Clutter::AlignConstraint.new(
+        #     %globals<actors>.elems ?? 
+        #       %globals<actors>[* - 1] !! %globals<stage>, 
+        #     CLUTTER_ALIGN_X_AXIS
+        #   ).setup(
+        #     factor => %globals<actors>.elems ?? 1 !! 0
+        #   )
+        # ]
+        # effect-by-name     => [
+        #   'bright', Clutter::BrightnessContrastEffect.new
+        # ]
       )
     );
+    
+    # Add task name as child of $a.
+    
+    # Hover
+    # $a.enter-event.tap({
+    #   my $b = Clutter::BrightnessContrastEffect.new( $a.get-effect('bright') );
+    #   $b.brightness = 15;
+    # });
+    # $a.leave-event.tap({
+    #   my $b = Clutter::BrightnessContrastEffect.new( $a.get-effect('bright') );
+    #   $b.brightness = 0;
+    # });
+    
   });
 
   start {
     my %t;
     for $Timeline-Data.lines {
       my $o = from-json($_);
-
+      
       given $o<k> {
         when 0 | 1 {
           my %v := $_ ?? %t !! %events;
-          quietly {
-            %v{ $o<i> }<module category name start> = $o<m c n t d>
+          quietly { 
+            %v{ $o<i> }<module category name start> = $o<m c n t d> 
           }
           proceed;
         }
-
+            
         when 1 {
           %t{ $o<p> }<child-tasks>.push: %t{ $o<i> } if $o<p>;
         }
-
-        when 2 {
-          %t{ $o<i> }<stop> = $o<t>;
+        
+        when 2 { 
+          %t{ $o<i> }<stop> = $o<t>; 
           %t{ $o<i> }<dur>  = %t{ $o<i> }<stop> - %t{ $o<i> }<start>;
           $S.emit( [$o<i>, %t{ $o<i> }] ) if $o<p>.not;
         }
-      }
+      }   
     }
     say 'Done';
   }
-
-  my $stage = Clutter::Stage.new.setup(
-    name           => 'Log::Timeline Viewer',
+  
+  %globals<stage> = Clutter::Stage.new.setup(
+    name           => 'Log::Timeline Viewer Î²',
     user-resizable => True,
   );
-
+  
   %globals<scroll> = Clutter::ScrollActor.new.setup(
-    scroll-mode     => CLUTTER_SCROLL_BOTH,
-    # Change to a GridLayout
-    layout-manager  => Clutter::BoxLayout.new.setup(
-        orientation => CLUTTER_ORIENTATION_VERTICAL
+    scroll-mode    => CLUTTER_SCROLL_BOTH,
+    layout-manager => Clutter::BoxLayout.new.setup(
+       orientation => CLUTTER_ORIENTATION_VERTICAL,
+       pack-start  => True,
     ),
     constraints => [
-      Clutter::AlignConstraint.new($stage, CLUTTER_ALIGN_X_AXIS, 0.5),
-      Clutter::AlignConstraint.new($stage, CLUTTER_ALIGN_Y_AXIS, 0.5),
+      Clutter::AlignConstraint.new(%globals<stage>, CLUTTER_ALIGN_X_AXIS, 0.5),
+      Clutter::AlignConstraint.new(%globals<stage>, CLUTTER_ALIGN_Y_AXIS, 0.5),
     ],
   );
-
-  $stage.add-child(%globals<scroll>);
-  $stage.destroy.tap({ Clutter::Main.quit });
-  $stage.activate.tap({
-    %globals<init>.keep unless %globals<init>.status ~~ Kept
+  
+  %globals<stage>.add-child(%globals<scroll>);
+  %globals<stage>.destroy.tap({ Clutter::Main.quit });
+  %globals<stage>.activate.tap({ 
+    %globals<init>.keep unless %globals<init>.status ~~ Kept 
   });
-  $stage.show-actor;
-
+  %globals<stage>.show-actor;
+  
   Clutter::Main.run;
 }
 
