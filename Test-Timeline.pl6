@@ -27,29 +27,28 @@ sub MAIN {
   %globals<init> = Promise.new;
 
   $supply.tap(-> *@a [$i, $t] {
+    CATCH { default { .message.say } }
+    
     await %globals<init> if %globals<init>.status ~~ Planned;
 
     say "Adding task #{ $i }";
     %tasks{$i} = $t;
 
-    my $tot = %tasks{$i}.values.map( *<dur> ).sum;
-    # for %tasks.values {
-    #   my $c = Clutter::BindConstraint.new( .<actor>.get-constraint('left') );
-    #   $c.factor =
-    # }
+    my $tot = %tasks.values.map( *<dur> ).sum;
 
     my $c = Clutter::Color.new_from_hls(360 * rand, 0.5, 0.5);
     $c.alpha = 255;
 
     %globals<actors>.push: (
       %tasks{$i}<actor> = Clutter::Actor.new.setup(
-        background-color    => $c,
-        parent              => %globals<scroll>,
-        constraints-by-name => [
-          'left', Clutter::BindConstraint.new(CLUTTER_ALIGN_X_AXIS).setup(
-            factor => *.dur / $tot
+        background-color     => $c,
+        parent               => %globals<scroll>,
+        width                => PIXEL-SECONDS * $t<dur>,
+        constraint-with-name => (
+          'left', Clutter::BindConstraint.new(
+            %globals<scroll>, CLUTTER_ALIGN_X_AXIS, $t<dur> / $tot
           )
-        ]
+        )
       )
     );
   });
