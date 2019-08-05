@@ -7,9 +7,9 @@ use Clutter::Raw::Types;
 use Clutter::Actor;
 use Clutter::AlignConstraint;
 use Clutter::BindConstraint;
-use Clutter::BoxLayout;
 use Clutter::BrightnessContrastEffect;
 use Clutter::Color;
+use Clutter::GridLayout;
 use Clutter::ScrollActor;
 use Clutter::Stage;
 
@@ -33,25 +33,26 @@ sub MAIN {
     once  { await %globals<init>     }
 
     say "Adding task #{ $i }";
+    
+    my $a;
     my $task = %tasks{$i} = $t;
-
     my $tot = %tasks.values.map( *<dur> ).sum;
-
     my $c = Clutter::Color.new_from_hls(360 * rand, 0.5, 0.5);
     $c.alpha = 255;
 
-    my $a;
-    my $last-a = %globals<actors> ?? %globals<actors>[* - 1] !! Nil;
     %globals<actors>.push: $a = %tasks{$i}<actor> = Clutter::Actor.new.setup(
       background-color   => $c,
       expand             => False,
-      parent             => %globals<scroll>,
+      #parent             => %globals<scroll>,
       size               => (PIXEL-SECONDS * $task<dur>, 50),
       reactive           => True,
       effects-with-name  => [
         [ 'bright', Clutter::BrightnessContrastEffect.new ]
       ]
-    );  
+    );
+    my $rc = %globals<actors>.elems;
+    %globals<layout>.attach($a, $rc, $rc);
+    sleep 0.5;
       
     # Hover
     $a.enter-event.tap(-> *@a {
@@ -106,12 +107,17 @@ sub MAIN {
     user-resizable   => True
   );
 
+  # This is semi working, but I think we've exhausted what we can do in pure
+  # clutter. We now need to convert this to a GTK::Clutter::Embed and
+  # add GTK::Scales that adjust to the size and KEEP our position at the upper
+  # left hand side of the scroller while adding.
   %globals<scroll> = Clutter::ScrollActor.new.setup(
     scroll-mode     => CLUTTER_SCROLL_BOTH,
     # Change to a GridLayout
-    layout-manager  => Clutter::BoxLayout.new.setup(
-        orientation => CLUTTER_ORIENTATION_VERTICAL,
-        pack-start  => True
+    layout-manager  => %globals<layout> = Clutter::GridLayout.new.setup(
+        orientation        => CLUTTER_ORIENTATION_VERTICAL,
+        column-homogeneous => False,
+        row-homogeneous    => True,
     ),
     constraints     => [
       Clutter::AlignConstraint.new(%globals<stage>, CLUTTER_ALIGN_X_AXIS, 0.5),
