@@ -2,27 +2,42 @@ use v6.c;
 
 use JsonC;
 
+use GTK::Compat::Types;
+use GTK::Raw::Types;
 use Clutter::Raw::Types;
+
+use GTK::Compat::Threads;
+
+use GTK::Adjustment;
+use GTK::Application;
+use GTK::Box;
+use GTK::Scale;
+use GTK::Window;
 
 use Clutter::Actor;
 use Clutter::AlignConstraint;
 use Clutter::BindConstraint;
 use Clutter::BrightnessContrastEffect;
 use Clutter::Color;
+use Clutter::FixedLayout;
 use Clutter::GridLayout;
+use Clutter::Point;
 use Clutter::ScrollActor;
 use Clutter::Stage;
 
-use Clutter::Main;
+use GTK::Clutter::Embed;
+use GTK::Clutter::Main;
 
 my $Timeline-Data;
 
-my (%tasks, %events, %globals);
+my (%tasks, %events, %globals, $first-t);
 
 constant PIXEL-SECONDS = 100;
+constant BAR-HEIGHT     = 50;
 
 sub MAIN {
-  exit(1) unless Clutter::Main.init == CLUTTER_INIT_SUCCESS;
+  die 'Unable to initialize GtkClutter'
+    unless GTK::Clutter::Main.init == CLUTTER_INIT_SUCCESS;
 
   my $S = Supplier.new;
   my $supply = $S.Supply;
@@ -31,28 +46,42 @@ sub MAIN {
   $supply.tap(-> *@a [$i, $t] {
     CATCH { default { .message.say } }
     once  { await %globals<init>     }
-
-    say "Adding task #{ $i }";
     
     my $a;
     my $task = %tasks{$i} = $t;
     my $tot = %tasks.values.map( *<dur> ).sum;
     my $c = Clutter::Color.new_from_hls(360 * rand, 0.5, 0.5);
+    my $size = %globals<actors> ?? %globals<actors>.elems !! 0;
     $c.alpha = 255;
 
+    # Normalize to current width of scroll actor. This will mean taking 
+    # (start-time + duration) / (width of parent) for each event.
+    #my $time-ratio = PIXEL-SECONDS / $tot;
+    my $time-ratio = PIXEL-SECONDS;
+    # my $aw = $time-ratio * $task<dur>   / %globals<scroll>.width;
+    # my $ax = $time-ratio * $task<start> / %globals<scroll>.width;
+    my $aw = $time-ratio * $task<dur>;
+    my $ax = $time-ratio * ($task<start> - $first-t);
+    
+    say "Adding task #{ $i } - $ax";
+    
     %globals<actors>.push: $a = %tasks{$i}<actor> = Clutter::Actor.new.setup(
       background-color   => $c,
       expand             => False,
-      #parent             => %globals<scroll>,
-      size               => (PIXEL-SECONDS * $task<dur>, 50),
+      size               => ($aw, BAR-HEIGHT),
+      position           => ($ax, BAR-HEIGHT * $size),
       reactive           => True,
       effects-with-name  => [
         [ 'bright', Clutter::BrightnessContrastEffect.new ]
       ]
     );
     my $rc = %globals<actors>.elems;
-    %globals<layout>.attach($a, $rc, $rc);
-    sleep 0.5;
+    %globals<scroll>.add-child($a);
+    #$a.set-position($task<start> * PIXEL-SECONDS, BAR-WIDTH);
+    $a.show-actor;
+    
+    %globals<h-scale>.adjustment.upper = $tot * PIXEL-SECONDS;
+    %globals<v-scale>.adjustment.upper = $size * BAR-HEIGHT;
       
     # Hover
     $a.enter-event.tap(-> *@a {
@@ -80,10 +109,11 @@ sub MAIN {
 
       given $o<k> {
         when 0 | 1 {
-          my %v := $_ ?? %t !! %events;
           quietly {
-            %v{ $o<i> }<module category name start> = $o<m c n t d>
+            %t{ $o<i> }<module category name start> = $o<m c n t d>
           }
+          $first-t = $o<t> unless $first-t;
+            
           proceed;
         }
 
@@ -99,40 +129,84 @@ sub MAIN {
       }
     }
     say 'Done';
-    say sprintf "%d, %d", %globals<scroll>.get-size;
+    say 
+      sprintf "%d, %d", 
+        %globals<h-scale>.adjustment.upper,
+        %globals<v-scale>.adjustment.upper;
+        
+    %globals<scroll>.scroll-to-point( Clutter::Point.new(0, 0) );
   }
-
-  my $stage = %globals<stage> = Clutter::Stage.new.setup(
-    name             => 'Log::Timeline Viewer',
-    user-resizable   => True
-  );
-
+  
+  # Create the initial gtk window and widgets, just like normal
+  with %globals<window> = GTK::Window.new {
+    .title = 'Log::Timeline Viewer';
+    .set-default-size(800, 600);
+    ( .resizable, .border-width ) = (True, 12);
+    .destroy-signal.tap({ GTK::Application.quit });
+  }
+  %globals<vbox> = GTK::Box.new-vbox(12);
+  %globals<window>.add(%globals<vbox>);
+  
+  my ($embed, $stage) = ( GTK::Clutter::Embed.new );
+  %globals<stage> = $stage = $embed.get-stage;
+  $stage.background-color = $CLUTTER_COLOR_DarkGray;
+  
+  %globals<h-scale v-scale> = (GTK::Scale.new-hscale, GTK::Scale.new-vscale);
+  .digits = 0 for %globals<h-scale v-scale>;
+  %globals<v-scale>.value-pos = GTK_POS_RIGHT;
+  my $hbox = GTK::Box.new-hbox(30);
+  $hbox.pack-start($embed, True, True);
+  $hbox.pack-start(%globals<v-scale>, False, True);
+  %globals<vbox>.pack-start($hbox, True, True);
+  %globals<vbox>.pack-start(%globals<h-scale>, False, True);
+  
+  my &move-to-position = sub {
+    CATCH { default { .message.say } } 
+    
+    return unless %globals<init>.status ~~ Kept;
+    
+    # Takes a dummy parameter and MUST return an unsigned int.
+    GTK::Compat::Threads.add-idle(-> $ --> guint {
+      CATCH { default { .message.say } }
+      say 'Scrolling...';
+      %globals<scroll>.scroll-to-point(
+        ClutterPoint.new(
+          %globals<h-scale>.value // 0, 
+          %globals<v-scale>.value // 0
+        )
+      );
+      0;
+    });
+  };
+  
+  %globals<h-scale>.value-changed.stable(0.5).tap({ &move-to-position() });
+  %globals<v-scale>.value-changed.stable(0.5).tap({ &move-to-position() });
+  
   # This is semi working, but I think we've exhausted what we can do in pure
   # clutter. We now need to convert this to a GTK::Clutter::Embed and
   # add GTK::Scales that adjust to the size and KEEP our position at the upper
   # left hand side of the scroller while adding.
   %globals<scroll> = Clutter::ScrollActor.new.setup(
-    scroll-mode     => CLUTTER_SCROLL_BOTH,
-    # Change to a GridLayout
-    layout-manager  => %globals<layout> = Clutter::GridLayout.new.setup(
-        orientation        => CLUTTER_ORIENTATION_VERTICAL,
-        column-homogeneous => False,
-        row-homogeneous    => True,
-    ),
-    constraints     => [
-      Clutter::AlignConstraint.new(%globals<stage>, CLUTTER_ALIGN_X_AXIS, 0.5),
-      Clutter::AlignConstraint.new(%globals<stage>, CLUTTER_ALIGN_Y_AXIS, 0.5),
+    layout-manager => %globals<layout> = Clutter::FixedLayout.new,
+    scroll-mode    => CLUTTER_SCROLL_BOTH,
+    position       => (5, 5),
+    constraints      => [
+    #   Clutter::AlignConstraint.new(%globals<stage>, CLUTTER_ALIGN_BOTH, 0.5),
+       Clutter::BindConstraint.new( %globals<stage>, CLUTTER_BIND_SIZE, 0 )
     ]
   );
 
   $stage.add-child(%globals<scroll>);
-  $stage.destroy.tap({ Clutter::Main.quit });
+  $stage.destroy.tap({ GTK::Application.quit });
   $stage.activate.tap({
     once { %globals<init>.keep }
   });
-  $stage.show-actor;
+    
+  %globals<window>.show-all;
+  
+  %globals<scroll>.show-actor;
 
-  Clutter::Main.run;
+  GTK::Application.main;
 }
 
 INIT $Timeline-Data = q:to/DATA/;
