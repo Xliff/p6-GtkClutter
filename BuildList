@@ -1,8 +1,10 @@
 Clutter::Actor
 Clutter::Raw::Types
 Clutter::Stage
+GTK::Bin
 GTK::Clutter::Raw::Actor
 GTK::Clutter::Raw::Embed
+GTK::Clutter::Raw::Texture
 GTK::Clutter::Raw::Types
 GTK::Compat::Types
 GTK::Container
@@ -12,4 +14,5 @@ GTK::Roles::Data
 GTK::Roles::Pointers
 GTK::Widget
 GTK::Window
+Method::Also
 

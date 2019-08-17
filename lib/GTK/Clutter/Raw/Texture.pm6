@@ -53,7 +53,7 @@ sub gtk_clutter_texture_set_from_stock (
   GtkClutterTexture $texture,
   GtkWidget $widget,
   Str $stock_id,
-  GtkIconSize $icon_size,
+  guint $icon_size, # GtkIconSize $icon_size,
   CArray[Pointer[GError]] $error
 )
   returns uint32
