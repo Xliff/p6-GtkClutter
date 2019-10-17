@@ -2,10 +2,6 @@ Clutter::Actor
 Clutter::Raw::Types
 Clutter::Stage
 GTK::Bin
-GTK::Clutter::Raw::Actor
-GTK::Clutter::Raw::Embed
-GTK::Clutter::Raw::Texture
-GTK::Clutter::Raw::Types
 GTK::Compat::Types
 GTK::Container
 GTK::Raw::Types
@@ -15,4 +11,12 @@ GTK::Roles::Pointers
 GTK::Widget
 GTK::Window
 Method::Also
-
+GTK::Clutter::Raw::Types
+GTK::Clutter::Main
+GTK::Clutter::Raw::Actor
+GTK::Clutter::Raw::Embed
+GTK::Clutter::Raw::Texture
+GTK::Clutter::Texture
+GTK::Clutter::Window
+GTK::Clutter::Actor
+GTK::Clutter::Embed
