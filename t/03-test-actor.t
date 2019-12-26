@@ -5,7 +5,7 @@ use GTK::Raw::Types;
 use Clutter::Raw::Types;
 use GTK::Clutter::Raw::Types;
 
-use GTK::Compat::Timeout;
+use GLib::Timeout;
 
 use GTK::Application;
 use GTK::Box;
@@ -78,7 +78,7 @@ sub add-clutter-actor($a, $c, $i) {
   $a.set-pivot-point(0.5, 0.5);
 }
 
-# Used by GTK::Compat::Timeout and NOT a signal handler.
+# Used by GLib::Timeout and NOT a signal handler.
 sub add-or-remove-event ($) {
   CATCH { default { .message.say } }
 
@@ -137,7 +137,7 @@ sub MAIN (
   $timeline.new-frame.tap(-> *@a { on-frame(|@a) });
   $timeline.start;
 
-  GTK::Compat::Timeout.add-seconds(3, -> *@a { add-or-remove-event(|@a) }) ;
+  GLib::Timeout.add-seconds(3, -> *@a { add-or-remove-event(|@a) }) ;
 
   GTK::Application.main;
 }
