@@ -4,7 +4,7 @@ use NativeCall;
 
 use GTK::Compat::Types;
 
-use GTK::Roles::Pointers;
+use GLib::Roles::Pointers;
 
 unit package GTK::Clutter::Raw::Types;
 
@@ -13,7 +13,7 @@ constant forced = 2;
 
 constant gtk-clutter is export = 'clutter-gtk-1.0',v0;
 
-class GtkClutterActor    is repr('CPointer') does GTK::Roles::Pointers is export { }
-class GtkClutterEmbed    is repr('CPointer') does GTK::Roles::Pointers is export { }
-class GtkClutterWindow   is repr('CPointer') does GTK::Roles::Pointers is export { }
-class GtkClutterTexture  is repr('CPointer') does GTK::Roles::Pointers is export { }
+class GtkClutterActor    is repr('CPointer') does GLib::Roles::Pointers is export { }
+class GtkClutterEmbed    is repr('CPointer') does GLib::Roles::Pointers is export { }
+class GtkClutterWindow   is repr('CPointer') does GLib::Roles::Pointers is export { }
+class GtkClutterTexture  is repr('CPointer') does GLib::Roles::Pointers is export { }
