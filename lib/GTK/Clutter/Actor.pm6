@@ -2,14 +2,8 @@ use v6.c;
 
 use Method::Also;
 
-use GTK::Compat::Types;
-use Clutter::Raw::Types;
-use GTK::Raw::Types;
 use GTK::Clutter::Raw::Types;
-
 use GTK::Clutter::Raw::Actor;
-
-use GTK::Roles::Data;
 
 use GTK::Bin;
 use GTK::Widget;
@@ -32,11 +26,13 @@ class GTK::Clutter::Actor is Clutter::Actor {
     $!contents = $object;
   }
 
-  multi method new (GtkClutterActor $actor) {
-    self.bless(:$actor);
+  multi method new (GtkClutterActor $clutter-actor) {
+    $clutter-actor ?? self.bless(:$clutter-actor) !! Nil;
   }
   multi method new {
-    self.bless( clutter-actor => gtk_clutter_actor_new() );
+    my $clutter-actor = gtk_clutter_actor_new();
+
+    $clutter-actor ?? self.bless(:$clutter-actor) !! Nil;
   }
 
   proto method new_with_contents (|)
@@ -44,41 +40,38 @@ class GTK::Clutter::Actor is Clutter::Actor {
   { * }
 
   multi method new_with_contents (GTK::Widget $object) {
-    self.bless(
-      clutter-actor => gtk_clutter_actor_new_with_contents($object.Widget),
-      :$object
-    );
+    my $clutter-actor = gtk_clutter_actor_new_with_contents($object.Widget);
+
+    $clutter-actor ?? self.bless(:$clutter-actor, :$object) !! Nil;
   }
   multi method new_with_contents (GtkWidget() $contents) {
-    self.bless(
-      clutter-actor => gtk_clutter_actor_new_with_contents($contents)
-    );
+    my $clutter-actor = gtk_clutter_actor_new_with_contents($contents);
+
+    $clutter-actor ?? self.bless(:$clutter-actor) !! Nil;
   }
 
-  method get_contents(:$raw) is also<get-contents> {
+  method get_contents(:$raw = False, :$widget = False) is also<get-contents> {
+    return $raw ?? $!contents.GtkWidget !! $!contents if $!contents;
+
     my $c = gtk_clutter_actor_get_contents($!ca);
-    $!contents ??
-      ($raw ?? $!contents.Container !! $!contents)
-      !!
-      ( $raw ?? $c !! GTK::Container.new($c) )
+
+    GTK::Widget.ReturnWidget($c, $raw, $widget);
   }
 
   method get_type is also<get-type> {
     state ($n, $t);
+
     unstable_get_type( self.^name, &gtk_clutter_actor_get_type, $n, $t );
   }
 
-  method get_widget(:$raw) is also<get-widget> {
+  method get_widget(:$raw = False, :$widget = False) is also<get-widget> {
     my $w = gtk_clutter_actor_get_widget($!ca);
-    # Lowest we can drop down to is GTK::Bin.
-    my $t = GTK::Widget.getType($w);
-    $raw ?? $w !!
-            $t.defined && $t.trim.chars ??
-              GTK::Widget.CreateObject($w) !! GTK::Bin.new($w);
+
+    GTK::Widget.ReturnWidget($w, $raw, $widget);
   }
 
   # XXX - NOTE: When using GTK::Container methods to handle contents, the
-  #       $!contents attribute will hang on to the contents specified at
+  #       $!contents attribute will hang on to the widget specified at
   #       construction time. This will need overriding methods to correct!
 
 }

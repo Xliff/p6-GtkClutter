@@ -2,9 +2,6 @@ use v6.c;
 
 use NativeCall;
 
-use GTK::Compat::Types;
-use Clutter::Raw::Types;
-use GTK::Raw::Types;
 use GTK::Clutter::Raw::Types;
 
 sub gtk_clutter_actor_get_contents (GtkClutterActor $actor)
