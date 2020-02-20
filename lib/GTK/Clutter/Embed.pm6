@@ -2,13 +2,8 @@ use v6.c;
 
 use Method::Also;
 
-use GTK::Compat::Types;
-use GTK::Raw::Types;
 use GTK::Clutter::Raw::Types;
-
 use GTK::Clutter::Raw::Embed;
-
-use GTK::Raw::Utils;
 
 use GTK::Container;
 
@@ -19,7 +14,7 @@ our subset EmbedAncestry of Mu is export
 
 class GTK::Clutter::Embed is GTK::Container {
   has GtkClutterEmbed $!gc;
-  
+
   submethod BUILD (:$embed) {
     given $embed {
       when EmbedAncestry {
@@ -29,6 +24,7 @@ class GTK::Clutter::Embed is GTK::Container {
             $to-parent = cast(GtkContainer, $_);
             $_;
           }
+
           default {
             $to-parent = $_;
             cast(GtkClutterEmbed, $_);
@@ -44,7 +40,9 @@ class GTK::Clutter::Embed is GTK::Container {
   }
 
   method new {
-    self.bless( embed => gtk_clutter_embed_new() );
+    my $embed = gtk_clutter_embed_new();
+
+    $embed ?? self.bless(:$embed) !! Nil;
   }
 
   method use_layout_size is rw is also<use-layout-size> {
@@ -53,19 +51,26 @@ class GTK::Clutter::Embed is GTK::Container {
         so gtk_clutter_embed_get_use_layout_size($!gc);
       },
       STORE => sub ($, Int() $use_layout_size is copy) {
-        my gboolean $u = resolve-bool($use_layout_size);
+        my gboolean $u = $use_layout_size.so.Int;
+
         gtk_clutter_embed_set_use_layout_size($!gc, $use_layout_size);
       }
     );
   }
 
-  method get_stage is also<get-stage> {
-    Clutter::Stage.new( gtk_clutter_embed_get_stage($!gc) )
+  method get_stage (:$raw = False) is also<get-stage> {
+    my $s = gtk_clutter_embed_get_stage($!gc);
+
+    $s ??
+      ( $raw ?? $s !!Clutter::Stage.new($s) )
+      !!
+      Nil;
   }
 
   method get_type is also<get-type> {
     state ($n, $t);
+    
     unstable_get_type( self.^name, &gtk_clutter_embed_get_type, $n, $t );
   }
-  
+
 }
