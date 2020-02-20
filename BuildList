@@ -3,6 +3,7 @@ COGL::Raw::Definitions
 COGL::Raw::Enums
 COGL::Raw::Exports
 COGL::Raw::Structs
+Cairo
 Clutter::Actor
 Clutter::Compat::Types
 Clutter::Raw::Definitions
@@ -10,8 +11,12 @@ Clutter::Raw::Enums
 Clutter::Raw::Exceptions
 Clutter::Raw::Exports
 Clutter::Raw::Structs
-Clutter::Raw::Types
 Clutter::Stage
+GDK::Raw::Definitions
+GDK::Raw::Enums
+GDK::Raw::Exports
+GDK::Raw::Structs
+GDK::Raw::Subs
 GIO::DBus::Raw::Types
 GIO::Raw::Definitions
 GIO::Raw::Enums
@@ -28,9 +33,13 @@ GLib::Roles::Pointers
 GTK::Bin
 GTK::Compat::Types
 GTK::Container
-GTK::Raw::Types
+GTK::Raw::Definitions
+GTK::Raw::Enums
+GTK::Raw::Exports
+GTK::Raw::Requisition
+GTK::Raw::Structs
+GTK::Raw::Subs
 GTK::Raw::Utils
-GTK::Roles::Data
 GTK::Widget
 GTK::Window
 Method::Also

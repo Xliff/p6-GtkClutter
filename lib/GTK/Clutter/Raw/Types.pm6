@@ -7,10 +7,13 @@ use GIO::Raw::Exports;
 use Pango::Raw::Exports;
 use COGL::Raw::Exports;
 use Clutter::Raw::Exports;
+use GDK::Raw::Exports;
+use GTK::Raw::Exports;
 use GTK::Clutter::Raw::Exports;
 
 unit package GTK::Clutter::Raw::Types;
 
+need Cairo;
 need GLib::Raw::Definitions;
 need GLib::Raw::Enums;
 need GLib::Raw::Structs;
@@ -35,6 +38,15 @@ need Clutter::Raw::Enums;
 need Clutter::Raw::Exceptions;
 need Clutter::Raw::Structs;
 need Clutter::Compat::Types;
+need GDK::Raw::Definitions;
+need GDK::Raw::Enums;
+need GDK::Raw::Structs;
+need GDK::Raw::Subs;
+need GTK::Raw::Definitions;
+need GTK::Raw::Enums;
+need GTK::Raw::Structs;
+need GTK::Raw::Subs;
+need GTK::Raw::Requisition;
 need GTK::Clutter::Raw::Definitions;
 
 BEGIN {
@@ -44,5 +56,7 @@ BEGIN {
     |@cogl-exports,
     |@pango-exports,
     |@clutter-exports,
+    |@gdk-exports,
+    |@gtk-exports,
     |@gtk-clutter-exports;
 }
