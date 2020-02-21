@@ -1,9 +1,5 @@
 use v6.c;
 
-use GTK::Compat::Types;
-use Clutter::Compat::Types;
-use Clutter::Raw::Types;
-use GTK::Raw::Types;
 use GTK::Clutter::Raw::Types;
 
 use Clutter::Actor;
@@ -68,7 +64,11 @@ sub MAIN {
   $window.set-default-size(600, 400);
 
   $window.add($notebook);
-  $window.destroy-signal.tap({ GTK::Application.quit });
+  $window.destroy-signal.tap({
+    GTK::Application.quit;
+    # Should not be necessary, but is. Is there another source?
+    exit;
+  });
   @clutter = GTK::Clutter::Embed.new xx 3;
   $notebook.append-page(@clutter[0], 'One stage');
   $notebook.append-page($vbox, 'Two stages');
