@@ -1,12 +1,10 @@
 use v6.c;
 
-use GTK::Compat::Types;
-use GTK::Raw::Types;
-use Clutter::Raw::Types;
 use GTK::Clutter::Raw::Types;
-
 use Clutter::Raw::Keysyms;
 
+
+use GDK::Pixbuf;
 use GTK::Application;
 use GTK::Button;
 use GTK::Box;
@@ -45,17 +43,15 @@ sub on-input($s, $e, $ud, $r) {
 
     # Consider using GTK::Compat::Roles::Data to make something like this possible.
     # (a != NULL && (CLUTTER_IS_TEXTURE (a) || CLUTTER_IS_CLONE (a)))
-    $a.hide-actor
-      if $a && (
-        GTK::Roles::Data.getType($a.Actor) eq
-        <Clutter::Clone GTK::Clutter::Texture>.any
-      );
+    $a.hide-actor if $a &&
+                     $a.getType eq <Clutter::Clone GTK::Clutter::Texture>.any;
+
   } elsif $event-type == CLUTTER_KEY_PRESS {
     my $k = $event.key-symbol;
     say "*** key press event (key: { $k }) ***";
     given $k {
-      when CLUTTER_KEY_q { GTK::Application.quit      }
-      when CLUTTER_KEY_r { .show for %oh<hand>.Array }
+      when CLUTTER_KEY_q { GTK::Application.quit; exit     }
+      when CLUTTER_KEY_r { .show for %oh<hand>.Array       }
     }
   }
 
@@ -83,7 +79,7 @@ sub MAIN {
   }
   die "Cannot find image file '{ $filename }'" unless $filename.IO.e;
 
-  my $pixbuf = GTK::Compat::Pixbuf.new-from-file($filename);
+  my $pixbuf = GDK::Pixbuf.new-from-file($filename);
   die 'pixbuf load failed' unless $pixbuf;
 
   my $window  = GTK::Window.new;
@@ -122,7 +118,7 @@ sub MAIN {
     %globals<fullscreen> .= not;
   });
 
-  $button3.clicked.tap({ GTK::Application.quit });
+  $button3.clicked.tap({ GTK::Application.quit; exit });
 
   %oh<stage> = $stage;
   %oh<group> = Clutter::Actor.new.setup( pivot-point => 0.5 xx 2 );
@@ -132,7 +128,7 @@ sub MAIN {
       %oh<hand>[$_] = GTK::Clutter::Texture.new;
       %oh<hand>[$_].set_from_pixbuf($pixbuf);
     } else {
-      %oh<hand>[$_] = Clutter::Clone.new(%oh<hand>[0]) but GTK::Roles::Data;
+      %oh<hand>[$_] = Clutter::Clone.new(%oh<hand>[0]);
     }
 
     my $first-hand := %oh<hand>[0];
