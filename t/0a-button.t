@@ -1,7 +1,5 @@
 use v6.c;
 
-use GTK::Raw::Types;
-use Clutter::Raw::Types;
 use GTK::Clutter::Raw::Types;
 
 use GTK::Application;
@@ -34,7 +32,7 @@ sub MAIN {
   my $button = GTK::Button.new-with-label('A Button');
 
   $window.title = 'RotateButton';
-  $window.destroy-signal.tap({ GTK::Application.quit });
+  $window.destroy-signal.tap({ GTK::Application.quit; exit });
   $window.set-default-size(200, 200);
   $window.add($vbox);
   $vbox.add($_) for $scale, $embed;
