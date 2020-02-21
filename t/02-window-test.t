@@ -1,11 +1,9 @@
 use v6.c;
 
-use GTK::Compat::Types;
-use GTK::Raw::Types;
-use Clutter::Raw::Types;
+use GTK::Clutter::Raw::Types;
 
-use GTK::Compat::Value;
-
+use GLib::Value;
+use GDK::Pixbuf;
 use GTK::Application;
 use GTK::IconView;
 use GTK::IconTheme;
@@ -27,8 +25,8 @@ sub add-liststore-rows($store, *@icon-names) {
   for @icon-names -> $icon {
     my $pixbuf = $theme.load-icon($icon, 48, 0);
     my %data = (
-      0 => GTK::Compat::Value.new(G_TYPE_STRING),
-      1 => GTK::Compat::Value.new(G_TYPE_OBJECT)
+      0 => GLib::Value.new(G_TYPE_STRING),
+      1 => GLib::Value.new(G_TYPE_OBJECT)
     );
     %data<0>.string = $icon;
     %data<1>.object = $pixbuf // GdkPixbuf;
@@ -70,12 +68,12 @@ sub MAIN {
   exit(1) unless GTK::Clutter::Main.init == CLUTTER_INIT_SUCCESS;
 
   my $window = GTK::Clutter::Window.new;
-  $window.destroy-signal.tap({ GTK::Application.quit });
+  $window.destroy-signal.tap({ GTK::Application.quit; exit; });
   $window.set-default-size(400, 300);
 
   my $store = GTK::ListStore.new(
     G_TYPE_STRING,
-    GTK::Compat::Pixbuf.get_type
+    GDK::Pixbuf.get_type
   );
   add-liststore-rows($store, |<
     devhelp
