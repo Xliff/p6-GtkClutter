@@ -64,10 +64,15 @@ class GTK::Clutter::Actor is Clutter::Actor {
     unstable_get_type( self.^name, &gtk_clutter_actor_get_type, $n, $t );
   }
 
-  method get_widget(:$raw = False, :$widget = False) is also<get-widget> {
+  # Return value MUST be GtkContainer or GTK::Container.
+  method get_widget(:$raw = False, :container(:$widget) = False)
+    is also<get-widget>
+  {
     my $w = gtk_clutter_actor_get_widget($!ca);
 
-    GTK::Widget.ReturnWidget($w, $raw, $widget);
+    $w = GTK::Widget.ReturnWidget(cast(GtkWidget, $w), $raw, $widget);
+    $w = GTK::Container.new($w.GtkWidget) if $w.WHAT ~~ GTK::Widget;
+    $w;
   }
 
   # XXX - NOTE: When using GTK::Container methods to handle contents, the
