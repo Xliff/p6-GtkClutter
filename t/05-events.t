@@ -1,8 +1,5 @@
 use v6.c;
 
-use GTK::Compat::Types;
-use GTK::Raw::Types;
-use Clutter::Raw::Types;
 use GTK::Clutter::Raw::Types;
 
 use Clutter::Actor;
@@ -12,6 +9,7 @@ use Clutter::Event;
 use Clutter::Stage;
 use Clutter::Text;
 
+use GDK::Pixbuf;
 use GTK::Application;
 use GTK::Box;
 use GTK::Entry;
@@ -74,7 +72,7 @@ sub MAIN {
     .title = 'GTK-Clutter Interaction Demo';
     .set-default-size(800, 600);
     ( .resizable, .border-width ) = (True, 12);
-    .destroy-signal.tap({ GTK::Application.quit });
+    .destroy-signal.tap({ GTK::Application.quit; exit });
   }
 
   # Create our layout box
@@ -114,7 +112,7 @@ sub MAIN {
     $filename = $path.add('redhand.png');
   }
   die "Cannot find image file '{ $filename }'" unless $filename.IO.e;
-  my $pixbuf = GTK::Compat::Pixbuf.new-from-file($filename);
+  my $pixbuf = GDK::Pixbuf.new-from-file($filename);
 
   %globals<hand> = GTK::Clutter::Texture.new;
   %globals<hand>.set-from-pixbuf($pixbuf);
