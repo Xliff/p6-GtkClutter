@@ -4,12 +4,12 @@ use Method::Also;
 
 use NativeCall;
 
-use GTK::Compat::Types;
 use GTK::Clutter::Raw::Types;
 
-use GTK::Raw::Utils;
+use GLib::Roles::StaticClass;
 
 class GTK::Clutter::Main {
+  also does GLib::Roles::StaticClass;
 
   method get_option_group is also<get-option-group> {
     gtk_clutter_get_option_group();
@@ -19,21 +19,23 @@ class GTK::Clutter::Main {
     samewith(0, CArray[Str]);
   }
   multi method init (Int() $argc, CArray[Str] $argv) {
-    my $c = resolve-int($argc);
-    gtk_clutter_init($argc, $argv);
+    my gint $c = $argc;
+
+    ClutterInitErrorEnum( gtk_clutter_init($c, $argv) );
   }
 
   method init_with_args (
     Int() $argc,
     CArray[Str] $argv,
-    Str $parameter_string,
-    GOptionEntry $entries,
-    Str $translation_domain,
+    Str() $parameter_string,
+    GOptionEntry() $entries,
+    Str() $translation_domain,
     CArray[Pointer[GError]] $error = gerror
   )
     is also<init-with-args>
   {
-    my $c = resolve-int($argc);
+    my gint $c = $argc;
+
     clear_error;
     my $rc = gtk_clutter_init_with_args(
       $c,
@@ -44,7 +46,7 @@ class GTK::Clutter::Main {
       $error
     );
     set_error($error);
-    $rc;
+    ClutterInitErrorEnum( $rc );
   }
 
 }
@@ -56,20 +58,20 @@ sub gtk_clutter_get_option_group ()
 { * }
 
 sub gtk_clutter_init (gint $argc, CArray[Str] $argv)
-  returns gint # ClutterInitError
+  returns ClutterInitError
   is native(gtk-clutter)
   is export
 { * }
 
 sub gtk_clutter_init_with_args (
   gint $argc,
-  CArray[CArray[Str]] $argv,
+  CArray[Str] $argv,
   Str $parameter_string,
   GOptionEntry $entries,
   Str $translation_domain,
   CArray[Pointer[GError]] $error
 )
-  returns gint # ClutterInitError
+  returns ClutterInitError
   is native(gtk-clutter)
   is export
 { * }
