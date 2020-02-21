@@ -1,12 +1,8 @@
 use v6.c;
 
-use GTK::Compat::Types;
-use GTK::Raw::Types;
-use Clutter::Raw::Types;
 use GTK::Clutter::Raw::Types;
 
 use GLib::Timeout;
-
 use GTK::Application;
 use GTK::Box;
 use GTK::Button;
@@ -109,8 +105,8 @@ sub MAIN (
   %globals<group> = Clutter::Actor.new;
 
   %globals<group>.set-pivot-point(0.5, 0.5);
-  $button.clicked.tap({ GTK::Application.quit });
-  $window.destroy-signal.tap({ GTK::Application.quit });
+  $button.clicked.tap({ GTK::Application.quit; exit  });
+  $window.destroy-signal.tap({ GTK::Application.quit; exit });
   $window.add($vbox);
   $clutter.set-size-request(WINWIDTH, WINHEIGHT);
   $vbox.pack-start($clutter, True, True);
