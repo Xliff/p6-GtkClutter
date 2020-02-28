@@ -30,8 +30,8 @@ GLib::Raw::Struct_Subs
 GLib::Raw::Structs
 GLib::Raw::Subs
 GLib::Roles::Pointers
+GLib::Roles::StaticClass
 GTK::Bin
-GTK::Compat::Types
 GTK::Container
 GTK::Raw::Definitions
 GTK::Raw::Enums
@@ -39,7 +39,6 @@ GTK::Raw::Exports
 GTK::Raw::Requisition
 GTK::Raw::Structs
 GTK::Raw::Subs
-GTK::Raw::Utils
 GTK::Widget
 GTK::Window
 Method::Also
