@@ -1,0 +1,802 @@
+Dependency Generation
+=====================
+real 0.52
+user 0.83
+sys 0.04
+ === Clutter::Actor ===
+Stage start      :   0.000
+Stage parse      :   1.615
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Clutter::Raw::Types ===
+Stage start      :   0.000
+Stage parse      :   1.400
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.009
+Stage mast       :   0.015
+Stage mbc        :   0.012
+Stage moar       :   0.000
+ === Clutter::Stage ===
+Stage start      :   0.000
+Stage parse      :   1.655
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Bin ===
+Stage start      :   0.000
+Stage parse      :   1.918
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Compat::Types ===
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at -e:1
+ === GTK::Container ===
+Stage start      :   0.000
+Stage parse      :   1.862
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Raw::Types ===
+Stage start      :   0.000
+Stage parse      :   1.411
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.011
+Stage mast       :   0.023
+Stage mbc        :   0.015
+Stage moar       :   0.000
+ === GTK::Raw::Utils ===
+Stage start      :   0.000
+Stage parse      :   1.282
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Roles::Data ===
+Stage start      :   0.000
+Stage parse      :   1.361
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Roles::Pointers ===
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Could not find GTK::Roles::Pointers in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at -e:1
+ === GTK::Widget ===
+Stage start      :   0.000
+Stage parse      :   1.737
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Window ===
+Stage start      :   0.000
+Stage parse      :   2.007
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Method::Also ===
+Stage start      :   0.000
+Stage parse      :   1.284
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === NativeCall ===
+Stage start      :   0.000
+Stage parse      :   1.387
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Types ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Types.pm6 (GTK::Clutter::Raw::Types)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Types.pm6 (GTK::Clutter::Raw::Types):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Types.pm6 (GTK::Clutter::Raw::Types)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Types.pm6 (GTK::Clutter::Raw::Types):5
+
+at -e:1
+ === GTK::Clutter::Main ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Main.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Main.pm6 (GTK::Clutter::Main)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Main.pm6 (GTK::Clutter::Main):7
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Main.pm6 (GTK::Clutter::Main)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Main.pm6 (GTK::Clutter::Main):7
+
+at -e:1
+ === GTK::Clutter::Raw::Actor ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Actor.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Actor.pm6 (GTK::Clutter::Raw::Actor)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Actor.pm6 (GTK::Clutter::Raw::Actor):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Actor.pm6 (GTK::Clutter::Raw::Actor)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Actor.pm6 (GTK::Clutter::Raw::Actor):5
+
+at -e:1
+ === GTK::Clutter::Raw::Embed ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Embed.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Embed.pm6 (GTK::Clutter::Raw::Embed)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Embed.pm6 (GTK::Clutter::Raw::Embed):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Embed.pm6 (GTK::Clutter::Raw::Embed)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Embed.pm6 (GTK::Clutter::Raw::Embed):5
+
+at -e:1
+ === GTK::Clutter::Raw::Texture ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Texture.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Texture.pm6 (GTK::Clutter::Raw::Texture)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Texture.pm6 (GTK::Clutter::Raw::Texture):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Texture.pm6 (GTK::Clutter::Raw::Texture)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Raw/Texture.pm6 (GTK::Clutter::Raw::Texture):5
+
+at -e:1
+ === GTK::Clutter::Texture ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Texture.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture):6
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture):6
+
+at -e:1
+ === GTK::Clutter::Window ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Window.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Window.pm6 (GTK::Clutter::Window)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Window.pm6 (GTK::Clutter::Window):7
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Window.pm6 (GTK::Clutter::Window)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Window.pm6 (GTK::Clutter::Window):7
+
+at -e:1
+ === GTK::Clutter::Actor ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Actor.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor):5
+
+at -e:1
+ === GTK::Clutter::Embed ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Embed.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed)
+    Could not find GTK::Compat::Types in:
+        file#/home/cbwood/Other_Projects/Method-Also/lib
+        file#/home/cbwood/Projects/p6-GLib/lib
+        file#/home/cbwood/Projects/p6-Pango/lib
+        file#/home/cbwood/Projects/p6-GIO/lib
+        file#/home/cbwood/Projects/p6-GDK/lib
+        file#/home/cbwood/Projects/p6-GtkPlus/lib
+        file#/home/cbwood/Projects/p6-WebkitGTK/lib
+        file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+        file#/home/cbwood/Projects/p6-AMTK/lib
+        file#/home/cbwood/Projects/p6-TEPL/lib
+        file#/home/cbwood/Projects/p6-GooCanvas/lib
+        file#/home/cbwood/Projects/p6-Slope/lib
+        file#/home/cbwood/Projects/p6-WNCK/lib
+        file#/home/cbwood/Projects/p6-Clutter/lib
+        file#/home/cbwood/Projects/p6-GtkClutter/lib
+        file#/home/cbwood/Projects/p6-COGL/lib
+        file#/home/cbwood/Projects/p6-GStreamer/lib
+        file#/home/cbwood/Projects/p6-RSVG/lib
+        file#/home/cbwood/Projects/p6-GtkSheet/lib
+        file#/home/cbwood/Projects/p6-GIMP/lib
+        inst#/home/cbwood/.raku
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+        inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+        ap#
+        nqp#
+        perl5#
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed):5
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed)
+Could not find GTK::Compat::Types in:
+    file#/home/cbwood/Other_Projects/Method-Also/lib
+    file#/home/cbwood/Projects/p6-GLib/lib
+    file#/home/cbwood/Projects/p6-Pango/lib
+    file#/home/cbwood/Projects/p6-GIO/lib
+    file#/home/cbwood/Projects/p6-GDK/lib
+    file#/home/cbwood/Projects/p6-GtkPlus/lib
+    file#/home/cbwood/Projects/p6-WebkitGTK/lib
+    file#/home/cbwood/Projects/p6-SourceViewGTK/lib
+    file#/home/cbwood/Projects/p6-AMTK/lib
+    file#/home/cbwood/Projects/p6-TEPL/lib
+    file#/home/cbwood/Projects/p6-GooCanvas/lib
+    file#/home/cbwood/Projects/p6-Slope/lib
+    file#/home/cbwood/Projects/p6-WNCK/lib
+    file#/home/cbwood/Projects/p6-Clutter/lib
+    file#/home/cbwood/Projects/p6-GtkClutter/lib
+    file#/home/cbwood/Projects/p6-COGL/lib
+    file#/home/cbwood/Projects/p6-GStreamer/lib
+    file#/home/cbwood/Projects/p6-RSVG/lib
+    file#/home/cbwood/Projects/p6-GtkSheet/lib
+    file#/home/cbwood/Projects/p6-GIMP/lib
+    inst#/home/cbwood/.raku
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/vendor
+    inst#/home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/core
+    ap#
+    nqp#
+    perl5#
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed):5
+
+at -e:1
+
+real 44.65
+user 50.16
+sys 2.85
