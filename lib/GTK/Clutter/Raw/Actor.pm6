@@ -2,10 +2,11 @@ use v6.c;
 
 use NativeCall;
 
-use GTK::Compat::Types;
-use Clutter::Raw::Types;
-use GTK::Raw::Types;
-use GTK::Clutter::Raw::Types;
+use GLib::Raw::Definitions;
+use GTK::Raw::Definitions;
+use GTK::Clutter::Raw::Definitions;
+
+unit package GTK::Clutter::Raw::Actor;
 
 sub gtk_clutter_actor_get_contents (GtkClutterActor $actor)
   returns GtkWidget

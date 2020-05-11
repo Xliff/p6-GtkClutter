@@ -2,10 +2,12 @@ use v6.c;
 
 use NativeCall;
 
-use GTK::Compat::Types;
-use GTK::Raw::Types;
-use Clutter::Raw::Types;
-use GTK::Clutter::Raw::Types;
+use GLib::Raw::Definitions;
+use GLib::Raw::Structs;
+use GDK::Raw::Definitions;
+use GTK::Raw::Definitions;
+use Clutter::Raw::Definitions;
+use GTK::Clutter::Raw::Definitions;
 
 unit package GTK::Clutter::Raw::Texture;
 
