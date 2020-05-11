@@ -4,12 +4,12 @@ use Method::Also;
 
 use NativeCall;
 
-use GTK::Compat::Types;
 use GTK::Clutter::Raw::Types;
 
-use GTK::Raw::Utils;
+use GLib::Roles::StaticClass;
 
 class GTK::Clutter::Main {
+  also does GLib::Roles::StaticClass;
 
   method get_option_group is also<get-option-group> {
     gtk_clutter_get_option_group();
@@ -19,8 +19,9 @@ class GTK::Clutter::Main {
     samewith(0, CArray[Str]);
   }
   multi method init (Int() $argc, CArray[Str] $argv) {
-    my $c = resolve-int($argc);
-    gtk_clutter_init($argc, $argv);
+    my $c = $argc;
+
+    ClutterInitErrorEnum( gtk_clutter_init($c, $argv) );
   }
 
   method init_with_args (
@@ -33,7 +34,8 @@ class GTK::Clutter::Main {
   )
     is also<init-with-args>
   {
-    my $c = resolve-int($argc);
+    my $c = $argc;
+
     clear_error;
     my $rc = gtk_clutter_init_with_args(
       $c,
