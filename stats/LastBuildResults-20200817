@@ -1,0 +1,1077 @@
+Dependency Generation
+=====================
+real 0.55
+user 0.88
+sys 0.01
+ === COGL::Compat::Types ===
+Stage start      :   0.000
+Stage parse      :   1.166
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === COGL::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.300
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.012
+Stage moar       :   0.000
+ === COGL::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.213
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === COGL::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.071
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === COGL::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.305
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Cairo ===
+Stage start      :   0.000
+Stage parse      :   1.190
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Clutter::Actor ===
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Actor.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+An exception occurred while evaluating a BEGIN
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+Exception details:
+  unable find loaded compunit matching 'GLib::Raw::Subs'
+    in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+    in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+    in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+    in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+    in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+
+
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+
+at -e:1
+ === Clutter::Compat::Types ===
+Stage start      :   0.000
+Stage parse      :   1.213
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Clutter::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.194
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Clutter::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.188
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === Clutter::Raw::Exceptions ===
+Stage start      :   0.000
+Stage parse      :   1.100
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Clutter::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.098
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Clutter::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.262
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Clutter::Stage ===
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Stage.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage):7
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+An exception occurred while evaluating a BEGIN
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+Exception details:
+  unable find loaded compunit matching 'GLib::Raw::Subs'
+    in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+    in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+    in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+    in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+    in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+
+
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage):7
+
+at -e:1
+ === GDK::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.173
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.006
+Stage moar       :   0.000
+ === GDK::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.222
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.007
+Stage mast       :   0.005
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GDK::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.061
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GDK::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.214
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GDK::Raw::Subs ===
+Stage start      :   0.000
+Stage parse      :   1.218
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.162
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.230
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.007
+Stage mast       :   0.006
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GLib::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.098
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GLib::Raw::Object ===
+Stage start      :   0.000
+Stage parse      :   1.232
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Struct_Subs ===
+Stage start      :   0.000
+Stage parse      :   1.197
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.275
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Subs ===
+Stage start      :   0.000
+Stage parse      :   1.249
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::Pointers ===
+Stage start      :   0.000
+Stage parse      :   1.139
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::StaticClass ===
+Stage start      :   0.000
+Stage parse      :   1.298
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Bin ===
+Stage start      :   0.000
+Stage parse      :   2.759
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.011
+Stage moar       :   0.000
+ === GTK::Container ===
+Stage start      :   0.000
+Stage parse      :   2.752
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.008
+Stage moar       :   0.000
+ === GTK::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.174
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.182
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.006
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GTK::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.065
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Raw::Requisition ===
+Stage start      :   0.000
+Stage parse      :   1.417
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.421
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Raw::Subs ===
+Stage start      :   0.000
+Stage parse      :   1.177
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Widget ===
+Stage start      :   0.000
+Stage parse      :   2.600
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.008
+Stage moar       :   0.000
+ === GTK::Window ===
+Stage start      :   0.000
+Stage parse      :   2.893
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.009
+Stage moar       :   0.000
+ === Method::Also ===
+Stage start      :   0.000
+Stage parse      :   1.059
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === NativeCall ===
+Stage start      :   0.000
+Stage parse      :   1.138
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Pango::Raw::Definitions ===
+Stage start      :   0.000
+Stage parse      :   1.222
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Pango::Raw::Enums ===
+Stage start      :   0.000
+Stage parse      :   1.235
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Pango::Raw::Exports ===
+Stage start      :   0.000
+Stage parse      :   1.055
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Pango::Raw::Structs ===
+Stage start      :   0.000
+Stage parse      :   1.348
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Pango::Raw::Subs ===
+Stage start      :   0.000
+Stage parse      :   1.328
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Definitions ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Definitions.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.238
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.001
+    Stage mast       :   0.034
+    Stage mbc        :   0.002
+Stage parse      :   2.458
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Actor ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Actor.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.479
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.003
+    Stage mast       :   0.046
+    Stage mbc        :   0.008
+Stage parse      :   2.704
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Embed ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Embed.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.643
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.003
+    Stage mast       :   0.150
+    Stage mbc        :   0.008
+Stage parse      :   3.023
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Texture ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Texture.pm6
+    Stage start      :   0.000
+    Stage parse      :   1.798
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.005
+    Stage mast       :   0.057
+    Stage mbc        :   0.010
+Stage parse      :   3.078
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Exports ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Exports.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.112
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.001
+    Stage mast       :   0.003
+    Stage mbc        :   0.002
+Stage parse      :   1.246
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Types ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.187
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.002
+    Stage mast       :   0.055
+    Stage mbc        :   0.004
+Stage parse      :   3.607
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.011
+Stage mast       :   0.025
+Stage mbc        :   0.017
+Stage moar       :   0.000
+ === GTK::Clutter::Texture ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Texture.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Actor.pm6
+        Stage start      :   0.000
+        
+            precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+            Stage start      :   0.000
+            [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+            An exception occurred while evaluating a BEGIN
+            at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+            Exception details:
+              unable find loaded compunit matching 'GLib::Raw::Subs'
+                in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+                in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+                in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+                in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+                in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+            
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+        
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture)
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+    
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture):9
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Actor.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture)
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+An exception occurred while evaluating a BEGIN
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+Exception details:
+  unable find loaded compunit matching 'GLib::Raw::Subs'
+    in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+    in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+    in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+    in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+    in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+
+
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Texture.pm6 (GTK::Clutter::Texture):9
+
+at -e:1
+ === GTK::Clutter::Actor ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Actor.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Actor.pm6
+        Stage start      :   0.000
+        
+            precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+            Stage start      :   0.000
+            [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+            An exception occurred while evaluating a BEGIN
+            at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+            Exception details:
+              unable find loaded compunit matching 'GLib::Raw::Subs'
+                in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+                in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+                in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+                in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+                in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+            
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+        
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor)
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+    
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor):11
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Actor.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor)
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+An exception occurred while evaluating a BEGIN
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+Exception details:
+  unable find loaded compunit matching 'GLib::Raw::Subs'
+    in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+    in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+    in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+    in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+    in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+
+
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Actor.pm6 (Clutter::Actor):7
+
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Actor.pm6 (GTK::Clutter::Actor):11
+
+at -e:1
+ === GTK::Clutter::Embed ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Embed.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Stage.pm6
+        Stage start      :   0.000
+        
+            precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+            Stage start      :   0.000
+            [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+            An exception occurred while evaluating a BEGIN
+            at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+            Exception details:
+              unable find loaded compunit matching 'GLib::Raw::Subs'
+                in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+                in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+                in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+                in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+                in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+            
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage)
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+        
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage):7
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed)
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage):7
+    
+    at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed):10
+[31m===[0mSORRY![31m===[0m Error while compiling -e
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Stage.pm6
+    Stage start      :   0.000
+    
+        precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+        Stage start      :   0.000
+        [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+        An exception occurred while evaluating a BEGIN
+        at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+        Exception details:
+          unable find loaded compunit matching 'GLib::Raw::Subs'
+            in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+            in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+            in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+            in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+            in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+        
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage)
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+    
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage):7
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed)
+Stage start      :   0.000
+
+    precomp ../p6-Clutter/lib/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    [31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+    An exception occurred while evaluating a BEGIN
+    at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+    Exception details:
+      unable find loaded compunit matching 'GLib::Raw::Subs'
+        in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+        in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+        in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+        in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+        in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+    
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage)
+Stage start      :   0.000
+[31m===[0mSORRY![31m===[0m Error while compiling /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types)
+An exception occurred while evaluating a BEGIN
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types):30
+Exception details:
+  unable find loaded compunit matching 'GLib::Raw::Subs'
+    in sub find-loaded at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 64
+    in sub handle at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 9
+    in sub re-export at /home/cbwood/Projects/rakudobrew/versions/moar-blead/install/share/perl6/site/sources/C6D7E07EC1EA21D8ADE15195E02C90AB8695E235 (CompUnit::Util) line 158
+    in sub glib-re-export at /home/cbwood/Projects/p6-GLib/lib/GLib/Raw/Exports.pm6 (GLib::Raw::Exports) line 14
+    in block  at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Raw/Types.pm6 (Clutter::Raw::Types) line 31
+
+
+at /home/cbwood/Projects/p6-Clutter/lib/Clutter/Stage.pm6 (Clutter::Stage):7
+
+at /home/cbwood/Projects/p6-GtkClutter/lib/GTK/Clutter/Embed.pm6 (GTK::Clutter::Embed):10
+
+at -e:1
+ === GTK::Clutter::Main ===
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Main.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.253
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.013
+    Stage mast       :   0.081
+    Stage mbc        :   0.023
+Adding alias in GTK::Clutter::Main for get-option-group...
+Stage parse      :   3.708
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+Adding alias in GTK::Clutter::Main for init-with-args...
+Roles: ((StaticClass))
+R: GLib::Roles::StaticClass
+
+real 117.11
+user 141.52
+sys 8.90
