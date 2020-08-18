@@ -9,7 +9,7 @@ use GLib::Roles::Pointers;
 unit package GTK::Clutter::Raw::Definitions;
 
 # Number of times a forced compile has been made.
-my constant forced = 10;
+my constant forced = 18;
 
 constant gtk-clutter is export = 'clutter-gtk-1.0',v0;
 
