@@ -15,22 +15,22 @@ class GTK::Clutter::Main {
     gtk_clutter_get_option_group();
   }
 
-  multi method init {
-    samewith(0, CArray[Str]);
-  }
-  multi method init (Int() $argc, CArray[Str] $argv) {
+  multi method init (
+    CArray[gint] $argc = CArray[gint],
+    CArray[Str]  $argv = CArray[Str]
+  ) {
     my $c = $argc;
 
     ClutterInitErrorEnum( gtk_clutter_init($c, $argv) );
   }
 
   method init_with_args (
-    Int() $argc,
-    CArray[Str] $argv,
-    Str $parameter_string,
-    GOptionEntry $entries,
-    Str $translation_domain,
-    CArray[Pointer[GError]] $error = gerror
+    Int()                         $argc,
+    CArray[CArray[Str]]           $argv,
+    Str()                         $parameter_string,
+    CArray[Pointer[GOptionEntry]] $entries,
+    Str()                         $translation_domain,
+    CArray[Pointer[GError]]       $error = gerror
   )
     is also<init-with-args>
   {
@@ -57,19 +57,19 @@ sub gtk_clutter_get_option_group ()
   is export
 { * }
 
-sub gtk_clutter_init (gint $argc, CArray[Str] $argv)
+sub gtk_clutter_init (CArray[gint] $argc, CArray[Str] $argv)
   returns gint # ClutterInitError
   is native(gtk-clutter)
   is export
 { * }
 
 sub gtk_clutter_init_with_args (
-  gint $argc,
-  CArray[CArray[Str]] $argv,
-  Str $parameter_string,
-  GOptionEntry $entries,
-  Str $translation_domain,
-  CArray[Pointer[GError]] $error
+  gint                          $argc,
+  CArray[CArray[Str]]           $argv,
+  Str                           $parameter_string,
+  CArray[Pointer[GOptionEntry]] $entries,
+  Str                           $translation_domain,
+  CArray[Pointer[GError]]       $error
 )
   returns gint # ClutterInitError
   is native(gtk-clutter)
