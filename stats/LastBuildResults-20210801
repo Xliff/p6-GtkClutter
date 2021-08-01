@@ -1,0 +1,595 @@
+Dependency Generation
+=====================
+real 0.61
+user 0.94
+sys 0.05
+ === COGL::Compat::Types === (1/55)
+Stage start      :   0.000
+Stage parse      :   2.000
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === COGL::Raw::Definitions === (2/55)
+Stage start      :   0.000
+Stage parse      :   2.247
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === COGL::Raw::Enums === (3/55)
+Stage start      :   0.000
+Stage parse      :   2.097
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === COGL::Raw::Exports === (4/55)
+Stage start      :   0.000
+Stage parse      :   1.974
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === COGL::Raw::Structs === (5/55)
+Stage start      :   0.000
+Stage parse      :   2.386
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.048
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Cairo === (6/55)
+Stage start      :   0.000
+Stage parse      :   2.096
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.009
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Clutter::Actor === (7/55)
+Stage start      :   0.000
+Stage parse      :   4.553
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.010
+Stage moar       :   0.000
+ === Clutter::Raw::Definitions === (8/55)
+Stage start      :   0.000
+Stage parse      :   2.197
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Clutter::Raw::Enums === (9/55)
+Stage start      :   0.000
+Stage parse      :   2.141
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.004
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === Clutter::Raw::Exceptions === (10/55)
+Stage start      :   0.000
+Stage parse      :   1.975
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Clutter::Raw::Exports === (11/55)
+Stage start      :   0.000
+Stage parse      :   1.959
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Clutter::Raw::Structs === (12/55)
+Stage start      :   0.000
+Stage parse      :   2.268
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Clutter::Stage === (13/55)
+Stage start      :   0.000
+Stage parse      :   4.647
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.010
+Stage moar       :   0.000
+ === GDK::Raw::Definitions === (14/55)
+Stage start      :   0.000
+Stage parse      :   2.256
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GDK::Raw::Enums === (15/55)
+Stage start      :   0.000
+Stage parse      :   2.136
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.002
+Stage mast       :   0.005
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GDK::Raw::Exports === (16/55)
+Stage start      :   0.000
+Stage parse      :   1.944
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GDK::Raw::Structs === (17/55)
+Stage start      :   0.000
+Stage parse      :   2.215
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GDK::Raw::Subs === (18/55)
+Stage start      :   0.000
+Stage parse      :   2.169
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Definitions === (19/55)
+Stage start      :   0.000
+Stage parse      :   2.096
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.045
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Enums === (20/55)
+Stage start      :   0.000
+Stage parse      :   2.306
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.015
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GLib::Raw::Exceptions === (21/55)
+Stage start      :   0.000
+Stage parse      :   1.881
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GLib::Raw::Exports === (22/55)
+Stage start      :   0.000
+Stage parse      :   1.947
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GLib::Raw::Object === (23/55)
+Stage start      :   0.000
+Stage parse      :   2.158
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Struct_Subs === (24/55)
+Stage start      :   0.000
+Stage parse      :   2.081
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Structs === (25/55)
+Stage start      :   0.000
+Stage parse      :   2.293
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Raw::Subs === (26/55)
+Stage start      :   0.000
+Stage parse      :   2.322
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::Pointers === (27/55)
+Stage start      :   0.000
+Stage parse      :   2.111
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GLib::Roles::StaticClass === (28/55)
+Stage start      :   0.000
+Stage parse      :   2.414
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Bin === (29/55)
+Stage start      :   0.000
+Stage parse      :   4.707
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.010
+Stage moar       :   0.000
+ === GTK::Container === (30/55)
+Stage start      :   0.000
+Stage parse      :   4.605
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.010
+Stage moar       :   0.000
+ === GTK::Raw::Definitions === (31/55)
+Stage start      :   0.000
+Stage parse      :   2.157
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Raw::Enums === (32/55)
+Stage start      :   0.000
+Stage parse      :   2.158
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.003
+Stage mast       :   0.006
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === GTK::Raw::Exports === (33/55)
+Stage start      :   0.000
+Stage parse      :   1.955
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Raw::Requisition === (34/55)
+Stage start      :   0.000
+Stage parse      :   2.572
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GTK::Raw::Structs === (35/55)
+Stage start      :   0.000
+Stage parse      :   2.547
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.002
+Stage moar       :   0.000
+ === GTK::Raw::Subs === (36/55)
+Stage start      :   0.000
+Stage parse      :   2.185
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Widget === (37/55)
+Stage start      :   0.000
+Stage parse      :   4.333
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.009
+Stage moar       :   0.000
+ === GTK::Window === (38/55)
+Stage start      :   0.000
+Stage parse      :   4.692
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.011
+Stage moar       :   0.000
+ === Method::Also === (39/55)
+Stage start      :   0.000
+Stage parse      :   1.967
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.005
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === NativeCall === (40/55)
+Stage start      :   0.000
+Stage parse      :   2.109
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Pango::Raw::Definitions === (41/55)
+Stage start      :   0.000
+Stage parse      :   2.134
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Pango::Raw::Enums === (42/55)
+Stage start      :   0.000
+Stage parse      :   2.145
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.002
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === Pango::Raw::Exports === (43/55)
+Stage start      :   0.000
+Stage parse      :   1.890
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === Pango::Raw::Structs === (44/55)
+Stage start      :   0.000
+Stage parse      :   2.409
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.003
+Stage moar       :   0.000
+ === Pango::Raw::Subs === (45/55)
+Stage start      :   0.000
+Stage parse      :   2.429
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.000
+Stage mast       :   0.001
+Stage mbc        :   0.001
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Definitions === (46/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Definitions.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.172
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.002
+    Stage mast       :   0.010
+    Stage mbc        :   0.002
+Stage parse      :   4.174
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Actor === (47/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Actor.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.300
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.004
+    Stage mast       :   0.027
+    Stage mbc        :   0.004
+Stage parse      :   4.340
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Embed === (48/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Embed.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.651
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.003
+    Stage mast       :   0.016
+    Stage mbc        :   0.004
+Stage parse      :   4.704
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Texture === (49/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Texture.pm6
+    Stage start      :   0.000
+    Stage parse      :   2.818
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.005
+    Stage mast       :   0.020
+    Stage mbc        :   0.007
+Stage parse      :   4.924
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Exports === (50/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Exports.pm6
+    Stage start      :   0.000
+    Stage parse      :   0.104
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.001
+    Stage mast       :   0.003
+    Stage mbc        :   0.002
+Stage parse      :   2.063
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Raw::Types === (51/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Raw/Types.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.991
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.002
+    Stage mast       :   0.022
+    Stage mbc        :   0.008
+Stage parse      :   6.159
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.016
+Stage mast       :   0.030
+Stage mbc        :   0.017
+Stage moar       :   0.000
+ === GTK::Clutter::Texture === (52/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Texture.pm6
+    Stage start      :   0.000
+    Stage parse      :   6.617
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.015
+    Stage mast       :   0.082
+    Stage mbc        :   0.034
+Stage parse      :   9.358
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Actor === (53/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Actor.pm6
+    Stage start      :   0.000
+    Stage parse      :   8.694
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.014
+    Stage mast       :   0.155
+    Stage mbc        :   0.059
+Stage parse      :  12.203
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Embed === (54/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Embed.pm6
+    Stage start      :   0.000
+    Stage parse      :   8.971
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.014
+    Stage mast       :   0.159
+    Stage mbc        :   0.064
+Stage parse      :  12.581
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.003
+Stage mbc        :   0.000
+Stage moar       :   0.000
+ === GTK::Clutter::Main === (55/55)
+Stage start      :   0.000
+
+    precomp lib/GTK/Clutter/Main.pm6
+    Stage start      :   0.000
+    Stage parse      :   3.282
+    Stage syntaxcheck:   0.000
+    Stage ast        :   0.000
+    Stage optimize   :   0.096
+    Stage mast       :   0.058
+    Stage mbc        :   0.015
+R: GLib::Roles::StaticClass
+Stage parse      :   5.684
+Stage syntaxcheck:   0.000
+Stage ast        :   0.000
+Stage optimize   :   0.001
+Stage mast       :   0.008
+Stage mbc        :   0.000
+Stage moar       :   0.000
+
+real 188.68
+user 216.55
+sys 10.91
